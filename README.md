@@ -15,13 +15,35 @@ Satu dashboard untuk berbagai merek/model Android yang mendukung ADB. Didesain u
 4. Di HP Android: buka About Phone, ketuk Build Number 7 kali jika diperlukan, buka Developer Options, aktifkan USB Debugging.
 5. Sambungkan kabel USB data dan setujui dialog RSA/USB debugging.
 6. Ekstrak ZIP dan buka folder proyek di VS Code.
-7. Terminal:
+7. 7. Buka terminal di folder proyek, lalu jalankan perintah berikut satu per satu:
+
+   Buat virtual environment:
 
    ```powershell
-   python -m venv .venv
+   py -3.13 -m venv .venv
+   ```
+
+   Aktifkan virtual environment:
+
+   ```powershell
    .\.venv\Scripts\Activate.ps1
+   ```
+
+   Instal dependensi:
+
+   ```powershell
    python -m pip install -r requirements.txt
+   ```
+
+   Pastikan HP terdeteksi:
+
+   ```powershell
    adb devices
+   ```
+
+   Jalankan aplikasi:
+
+   ```powershell
    python app.py
    ```
 
